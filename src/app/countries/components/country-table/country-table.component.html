@@ -1,0 +1,84 @@
+<div *ngIf="countries.length === 0; else table"
+class="w-full mx-1 py-5 bg-yellow-400/75 text-slate-200 rounded-lg text-center font-semibold
+  text-lg md:text-xl lg:text-2xl xl:text-3xl">
+  No hay paises <i class='bx bx-flag'></i>
+</div>
+
+<ng-template #table>
+  <div class="min-h-[500px] h-full overflow-y-scroll pb-10">
+    <div class="h-full">
+      <table class="w-full min-w-max table-auto text-left h-full">
+
+        <thead>
+          <tr>
+            <th class="border-y border-blue-gray-100 bg-gray-500/50 p-4">
+              <p class="block antialiased font-sans text-base text-gray-400 font-semibold leading-none opacity-90">#
+              </p>
+            </th>
+            <th class="border-y border-blue-gray-100 bg-gray-500/50 p-4">
+              <p class="block antialiased font-sans text-base text-gray-400 font-semibold leading-none opacity-90">
+                Bandera
+              </p>
+            </th>
+            <th class="border-y border-blue-gray-100 bg-gray-500/50 p-4">
+              <p class="block antialiased font-sans text-base text-gray-400 font-semibold leading-none opacity-90">
+                Nombre
+              </p>
+            </th>
+            <th class="border-y border-blue-gray-100 bg-gray-500/50 p-4">
+              <p class="block antialiased font-sans text-base text-gray-400 font-semibold leading-none opacity-90">
+                Población
+              </p>
+            </th>
+
+            <th class="border-y border-blue-gray-100 bg-gray-500/50 p-4">
+              <p class="block antialiased font-sans text-base text-gray-400 font-semibold leading-none opacity-90"></p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let country of countries; let i = index">
+            <td class="p-4 border-b border-gray-500">
+              <div class="w-max">
+                <div
+                  class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-purple-500/70 text-purple-300 py-1 px-2 text-xs rounded-md"
+                  style="opacity: 1;">
+                  <span class="">{{i + 1}}</span>
+                </div>
+              </div>
+            </td>
+            <td class="p-4 border-b border-gray-500">
+              <div class="flex items-center gap-3">
+                <img src={{country.flags.svg}} alt={{country.capital}}
+                  class="inline-block relative object-center !rounded-full w-14 h-14 object-cover rounded-lg border border-gray-500 bg-gray-500/50 object-contain p-1">
+                <p class="block antialiased font-sans text-sm leading-normal text-gray-400 font-bold">
+                  {{country.name.common}}</p>
+              </div>
+            </td>
+            <td class="p-4 border-b border-gray-500">
+              <p class="block antialiased font-sans text-sm leading-normal text-gray-400 font-normal">
+                {{country.capital}}</p>
+            </td>
+            <td class="p-4 border-b border-gray-500">
+              <p class="block antialiased font-sans text-sm leading-normal text-gray-400 font-normal">
+                {{country.population.toLocaleString()}}
+              </p>
+            </td>
+            <td class="p-4 border-b border-gray-500">
+              <div class="w-max">
+                <div
+                  class="relative grid items-center font-sans font-bold uppercase whitespace-nowrap select-none bg-green-500/70 text-green-300 py-1 px-2 text-xs rounded-md cursor-pointer"
+                  style="opacity: 1;">
+                  <span class=""
+                    [routerLink]="['/countries/by', country.cca3]"
+                  >Ver mas</span>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="h-[80px]"></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</ng-template>

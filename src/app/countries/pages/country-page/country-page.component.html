@@ -1,0 +1,127 @@
+<ng-template #loading>
+  <div class="min-h-screen">
+    <div class="w-[98%] mx-1 py-5 bg-blue-400/75 text-slate-200 rounded-lg text-center font-semibold
+    text-lg md:text-xl lg:text-2xl xl:text-3xl mt-8 flex justify-center items-center gap-4">
+      Cargando paises <i class='bx bx-loader-alt animate-spin'></i>
+    </div>
+  </div>
+
+</ng-template>
+
+
+<div class="w-full px-5 mt-5 min-h-screen h-full overflow-y-scroll" *ngIf="country; else loading">
+  <h1 class="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-1
+    text-blue-500 first-letter:text-slate-300
+  ">{{country.name.common}}</h1>
+  <div class="text-slate-500 bg-slate-500 h-[1px] w-full shadow-2xl">
+    <br />
+    <div class="grid grid-cols-12 gap-5">
+      <div class="col-span-12 md:col-span-4">
+        <p class="block antialiased font-sans text-2xl leading-normal text-gray-400 font-bold">
+          Bandera</p>
+        <br />
+        <div class="flex items-center gap-3">
+          <img src={{country.flags.svg}} alt={{country.capital}} class="inline-block relative object-center !rounded-full w-28 h-28 object-cover rounded-lg border border-gray-500 bg-gray-500/50 object-contain p-1 hover:scale-105 transition-all transition-eaise duration-300
+            ">
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-8">
+        <p class="block antialiased font-sans text-2xl leading-normal text-gray-400 font-bold">
+          Información</p>
+        <br />
+        <div class="w-full flex flex-col md:flex-row gap-4">
+
+          <div class="w-full md:w-1/2">
+            <div class="flex gap-3 text-lg text-gray-500">
+              <strong>Población:</strong> {{country.population | number}}
+            </div>
+            <br />
+            <div class="flex gap-3 text-lg text-gray-500">
+              <strong>Región:</strong> {{ country.region }}
+            </div>
+            <br />
+            <div class="flex gap-3 text-lg text-gray-500">
+              <strong>Sub región:</strong> {{ country.subregion }}
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <div class="flex gap-3 text-lg text-gray-500">
+              <strong>Area:</strong> {{country.area | number}}
+            </div>
+            <br />
+            <div class="flex gap-3 text-lg text-gray-500">
+              <strong>Codigo:</strong> {{ country.cca2 }}
+            </div>
+            <br />
+            <div class="flex flex-wrap gap-3 text-lg text-gray-500">
+              <strong>Zonas horarias:</strong>
+              <div *ngFor="let hora of country.timezones" class="flex flex-wrap gap-3">
+                <span>{{hora}}</span>
+                <br/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="w-full flex flex-wrap gap-5">
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+          ">
+            {{country.translations?.['ara']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                    ">
+            {{country.translations?.['bre']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                              ">
+            {{country.translations?.['fra']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                          ">
+            {{country.translations?.['jpn']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                          ">
+            {{country.translations?.['spa']?.common}}
+          </div>
+
+
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                              ">
+            {{country.translations?.['per']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                                  ">
+            {{country.translations?.['zho']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                          ">
+            {{country.translations?.['kor']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                                    ">
+            {{country.translations?.['srp']?.common}}
+          </div>
+
+          <div class="px-2 py-1 bg-blue-500 rounded-lg text-lg text-slate-200 hover:scale-105 transition-all transition-eaise duration-300
+                                                    ">
+            {{country.translations?.['rus']?.common}}
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="h-[50px]"></div>
+
+    </div>
+
+  </div>

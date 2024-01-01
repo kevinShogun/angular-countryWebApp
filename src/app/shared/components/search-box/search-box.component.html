@@ -1,0 +1,10 @@
+<div class="w-full pt-5">
+  <input
+    type='text'
+    [placeholder]="placeholder"
+    class="w-full rounded-lg outline-none focus:outline-none px-5 py-2 ring-1 focus:ring-slate-300
+    text-slate-300 bg-transparent transition-all transition-eaise duration-300 font-medium"
+    (keyup.enter)="emitValue(txtSearchInput.value)"
+    #txtSearchInput
+  >
+</div>
