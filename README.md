@@ -2,6 +2,8 @@
 
 Welcome to my Angular application repository! This project showcases my skills in Angular development by implementing various features like services, pipes, local storage utilization for data persistence, integration with the Countries API, and styling using Tailwind CSS.
 
+
+
 ## Features
 
 ### Services Implementation
@@ -19,7 +21,8 @@ The application fetches data from the Countries API, providing users with inform
 ### Tailwind CSS Styling
 Styling has been accomplished using Tailwind CSS, ensuring a modern and responsive design throughout the application.
 
-## Getting Started
+## Getting Started[Countryapp Y 1 Página Más - Personal  Microsoft​ Edge 2024-01-01 20-27-36.webm](https://github.com/kevinShogun/angular-countryWebApp/assets/54457637/431d2ca8-6967-4728-83be-bab822a1feb5)
+
 
 To run this Angular application locally, follow these steps:
 
