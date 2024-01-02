@@ -2,6 +2,7 @@
 
 Welcome to my Angular application repository! This project showcases my skills in Angular development by implementing various features like services, pipes, local storage utilization for data persistence, integration with the Countries API, and styling using Tailwind CSS.
 
+https://github.com/kevinShogun/angular-countryWebApp/assets/54457637/b4e64b55-82a0-49d0-bbd7-78348104b6b9
 
 
 ## Features
