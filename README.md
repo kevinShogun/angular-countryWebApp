@@ -1,27 +1,52 @@
-# CountryApp
+# Angular Application using Services, Pipes, Local Storage, Countries API, and Tailwind CSS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+Welcome to my Angular application repository! This project showcases my skills in Angular development by implementing various features like services, pipes, local storage utilization for data persistence, integration with the Countries API, and styling using Tailwind CSS.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Services Implementation
+The application demonstrates the use of Angular services for handling data logic, ensuring a modular and efficient structure.
 
-## Code scaffolding
+### Pipes Utilization
+I have utilized Angular pipes to transform and format data elegantly, improving the user experience.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Local Storage for Persistent Data
+Data persistence is achieved through local storage, allowing users to retain their preferences and information across sessions.
 
-## Build
+### Integration with Countries API
+The application fetches data from the Countries API, providing users with information about different countries.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Tailwind CSS Styling
+Styling has been accomplished using Tailwind CSS, ensuring a modern and responsive design throughout the application.
 
-## Running unit tests
+## Getting Started
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run this Angular application locally, follow these steps:
 
-## Running end-to-end tests
+1. Clone this repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run `ng serve` to start the development server.
+5. Open your browser and go to `http://localhost:4200/` to view the application.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Technologies Used
 
-## Further help
+- Angular
+- TypeScript
+- HTML/CSS
+- Tailwind CSS
+- Countries API
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Purpose
+
+This repository serves as a showcase for my Angular skills and proficiency in implementing various features. It's designed as a portfolio project to demonstrate my expertise in frontend development.
+
+## Contribution
+
+If you have any suggestions, improvements, or would like to collaborate, feel free to open an issue or create a pull request. Your contributions are highly appreciated!
+
+## Contact
+
+You can reach me via email at [gkevinyamil@gmail.com](mailto:gkevinyamil@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/kevin-garc%C3%ADa-0849a21a8/).
+
+Thank you for visiting this repository and exploring my Angular application! Your feedback and support are valuable.
