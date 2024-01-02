@@ -4,10 +4,12 @@
     text-green-500 first-letter:text-slate-300
   ">País</h1>
   <div class="text-slate-500 bg-slate-500 h-[1px] w-full shadow-2xl">
-    <shared-search-box (onValue)="searchByCountry($event)" [placeholder]="'Buscar por Country ...'"></shared-search-box>
+    <shared-search-box (onDebounce)="searchByCountry($event)" [initalValue]="searchInitalValue"
+      [placeholder]="'Buscar por Country ...'"></shared-search-box>
 
     <br /><br />
 
     <countries-table [countries]="countries"></countries-table>
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 
   </div>
